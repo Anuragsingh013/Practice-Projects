@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <style>
+        h1{
+            text-align: center;
+            color: gray;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            margin: 2px;
+            border-radius: 8px;
+            background-color: grey;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main{
+            text-align: center;
+        }
+        button{
+            margin-top: 2rem;
+            padding: 8px;
+            border-radius: 25px;
+           border: 1px solid green;
+           transition: 0.4s;
+        }
+        button:hover{
+            transform: scale(1.1);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Tic Tac Toe</h1>
+        <div class="container">
+            <div class="row">
+                <div class="box box-1"></div>
+                <div class="box box-2"></div>
+                <div class="box box-3"></div>
+            </div>
+            <div class="row">
+                <div class="box box-4"></div>
+                <div class="box box-5"></div>
+                <div class="box box-6"></div>
+            </div>
+            <div class="row">
+                <div class="box box-7"></div>
+                <div class="box box-8"></div>
+                <div class="box box-9"></div>
+            </div>
+        </div>
+    
+        <button onclick="playAgain()">play again</button>
+    </div>
+   
+   
+
+    <script>
+
+   let box=document.querySelectorAll(".box")
+   let heading=document.querySelector("h1");
+
+   let chance=0;
+   let arr=[];
+   let setLock=true;
+
+
+   for (let i = 0; i < box.length; i++) {
+
+   
+/* putting if(setlock) here will not work because it checks once  the setlock value 
+   when script run , which is initially TRUE but eventhandler fn will run on each click so condition will
+  check inside event handler fn and so after changing setlock value inside winner fn
+  "click" event handler function will not work  */
+
+        box[i].addEventListener('click',function(){
+            if(setLock){
+
+              if(chance%2==0){
+              box[i].innerHTML= `<img src="cross.svg" alt="" width="100px">`
+                chance++;
+                arr[i]="x"
+               console.log(arr)
+               winner();
+             }
+   
+            else{
+               box[i].innerHTML= `<img src="zero.svg" alt="" width="60px">`
+               chance++;
+               arr[i]="0"
+              console.log(arr)
+               winner();
+            }
+       }
+  
+ })
+
+    }
+   
+
+   function playAgain(){
+    location.reload();
+   }
+
+
+   const winner=()=>{
+
+    if (
+    (arr[0] === arr[1] && arr[1] === arr[2] && arr[0] === "x") ||
+    (arr[3] === arr[4] && arr[4] === arr[5] && arr[3] === "x") ||
+     (arr[6] === arr[7] && arr[7] === arr[8] && arr[6] === "x") ||
+      (arr[0] === arr[3] && arr[3] === arr[6] && arr[0] === "x") || 
+      (arr[1] === arr[4] && arr[4] === arr[7] && arr[1] === "x") || 
+      (arr[2] === arr[5] && arr[5] === arr[8] && arr[2] === "x") ||
+       (arr[6] === arr[4] && arr[4] === arr[2] && arr[6] === "x") ||
+        (arr[0] === arr[4] && arr[4] === arr[8] && arr[0] === "x")   
+) 
+{
+    heading.innerHTML = `"X" is the winner`;
+    setLock = false;
+}
+
+ else if (
+    (arr[0] === arr[1] && arr[1] === arr[2] && arr[0] === "0") ||
+    (arr[3] === arr[4] && arr[4] === arr[5] && arr[3] === "0") || (arr[6] === arr[7] && arr[7] === arr[8] && arr[6] === "0") || (arr[0] === arr[3] && arr[3] === arr[5] && arr[0] === "0") || (arr[1] === arr[4] && arr[4] === arr[7] && arr[1] === "0") || (arr[2] === arr[5] && arr[5] === arr[8] && arr[2] === "0") || (arr[6] === arr[4] && arr[4] === arr[2] && arr[6] === "0") || (arr[0] === arr[4] && arr[4] === arr[8] && arr[0] === "0") 
+   ) {
+    heading.innerHTML = `"0" is the winner`;
+    setLock = false;
+}
+
+   }
+
+
+/*
+1. WRONG APPROCH
+
+(arr[0]==arr[1]==arr[2]=="x")   In JavaScript, the equality operator (==) has left-to-right associativity,
+
+Let's break down what happens:
+
+arr[0] == arr[1] is evaluated first. Let's say this is true.
+Then, true == arr[2] is evaluated. If arr[2] is "x", it checks if true is equal to "x". This comparison will likely be false.
+
+
+2.RIGHT APPROCH
+
+(arr[0] === arr[1] && arr[1] === arr[2] && arr[0] === "x")
+
+In this corrected version:
+
+arr[0] === arr[1] checks if the first and second elements are equal.
+arr[1] === arr[2] checks if the second and third elements are equal.
+arr[0] === "x" checks if the first element is equal to "x".
+
+
+*/
+
+    </script>
+</body>
+</html>
