@@ -1,0 +1,62 @@
+.detailpage{
+    background: #09ea8c;
+    padding: 1%;
+    min-height: 100vh;
+    color: #fff;
+}
+.carddetail{
+    display: flex;
+    justify-content: center;
+    padding-top: 2.4rem;
+    flex-wrap: wrap;
+}
+.imagebox{
+    width: 150px;
+    height: 460px;
+    border-radius: 24px;
+   
+    flex-basis: 20%;
+}
+.imagebox img{
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+}
+.description{
+    padding:4rem;  
+    flex-wrap: wrap;
+    flex-basis: 55%;
+}
+.paragraph{
+    font-size: 32px;
+}
+@media screen and (max-width: 780px) {
+    .carddetail{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 2.4rem;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .imagebox{
+        width: 90%;
+        height: 100%;
+        border-radius: 24px;
+        flex-basis: 40%;
+    }
+    .imagebox img{
+        width: 100%;
+        height: 100%;
+        border-radius: 24px;
+    }
+    .description{
+        
+        flex-wrap: wrap;
+        flex-basis: 55%;
+    }
+    .paragraph{
+        font-size: 16px;
+    }
+  }
+  
