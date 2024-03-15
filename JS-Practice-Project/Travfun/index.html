@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travfun</title>
+
+    <link rel="stylesheet" href="output.css">
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- swiper cdn   -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- swiper cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+        integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
+    <!-- scroll reveal cdn -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+
+
+<style>
+    .swiper {
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .swiper-slide {
+
+        padding: 4% 8%;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 4px;
+        backdrop-filter: blur(4px);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .swiper {
+        transition: .4s;
+        border: 2px solid #ece5e5;
+    }
+
+    .swiper:hover {
+        transform: scale(1.02);
+    }
+
+
+    .swiper-slide h3 {
+        flex-basis: 50%;
+        padding-left: 48px;
+    }
+
+    .swiper-slide img {
+
+        flex-basis: 40%;
+        border-radius: 12px;
+        display: block;
+        height: 320px;
+        object-fit: cover;
+    }
+
+    :root {
+        --swiper-navigation-size: 24px;
+    }
+</style>
+
+<body>
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+    <div class="container">
+        <div class="hero-section">
+            <nav>
+                <h1 class="logo">Travfun</h1>
+                <div class="wrapper">
+                    <i class="fa-solid fa-bars openMenu"></i>
+                </div>
+
+
+                <ul class="navlinks">
+                    <div class="wrapper">
+                        <i class="fa-solid fa-x closeMenu"></i>
+                    </div>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#footer">Product</a></li>
+                    <li class="lightModeBtn"><img style="width: 25px;" src="./assets/brightness.png" alt=""></li>
+                    <li class="darkModeBtn"><img style="width: 25px;" src="./assets/moon.png" alt=""></li>
+                </ul>
+            </nav>
+            <div class="title">
+                <!-- <h1 style="text-align: center; padding-top: 10%;">Choos<span style="color: #FF2006;">e</span> Yo<span style="color: #FDAE09;">u</span>r N<span style="color: #124312;">e</span>xt <span>D</span>es<span>t</span>in<span style="color:chocolate;">a</span>tion</h1> -->
+                <h1 style="text-align: center; padding-top: 10%;" data-aos="fade-right">Choose Your Next Destination</h1>
+                <div class="searchBar" data-aos="fade-left">
+                    <input type="text" placeholder="Search here...">
+                    <button class="btn">Search</button>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="about" id="about">
+            <div class="left-part">
+                <h1>About</h1>
+                <img src="./assets/card-2.jpg" alt="" style="border-radius: 12px;  min-height: 250px; ">
+            </div>
+            <div class="right-part">
+                <h1>Travfun</h1>
+                <h3>At TravFun, we believe that travel is not just about visiting new places – it's about immersing
+                    yourself in new cultures, embracing unique experiences, and creating memories that last a lifetime.
+                    Whether you're a seasoned globetrotter or a first-time traveler, we're here to inspire and guide you
+                    on your journey to uncover the wonders of the world.</h3>
+            </div>
+        </div>
+        <h1 style=" padding: 0 6%; padding-top: 6%; font-size: 2rem;">Exclusive</h1>
+        <div class="carousel-section">
+
+            <div class="card">
+                <img src="./assets/card-3.jpg" alt="">
+                <h1>Delhi</h1>
+            </div>
+            <div class="card">
+                <img src="./assets/card-1.jpg" alt="">
+                <h1>Delhi</h1>
+            </div>
+            <div class="card">
+                <img src="./assets/card-1.jpg" alt="">
+                <h1>Delhi</h1>
+            </div>
+            <div class="card">
+                <img src="./assets/card-1.jpg" alt="">
+                <h1>Delhi</h1>
+            </div>
+            <div class="card">
+                <img src="./assets/card-2.jpg" alt="">
+                <h1>Delhi</h1>
+            </div>
+            <div class="card">
+                <img src="./assets/card-3.jpg" alt="">
+                <h1>Delhi</h1>
+            </div>
+        </div>
+        <div class="testimonial">
+            <h1 style="padding: 4%;">Testimonial</h1>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./assets/card-2.jpg" alt="" style="border-radius: 12px;  min-height: 250px; ">
+                        <h3>In the heart of North Africa lies a land steeped in ancient history, adorned with
+                            magnificent monuments, and shrouded in mystical allure – Egypt.</h3>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/card-1.jpg" alt="" style="border-radius: 12px;  min-height: 250px; ">
+                        <h3> Follow along as we share the
+                            captivating tales of intrepid travelers who embarked on unforgettable journeys to explore
+                            the wonders of this enchanting land..</h3>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/card-3.jpg" alt="" style="border-radius: 12px;  min-height: 250px; ">
+                        <h3> Follow along as we share the
+                            captivating tales of intrepid travelers who embarked on unforgettable journeys to explore
+                            the wonders of this enchanting land..</h3>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/card-2.jpg" alt="" style="border-radius: 12px;  min-height: 250px; ">
+                        <h3> Follow along as we share the
+                            captivating tales of intrepid travelers who embarked on unforgettable journeys to explore
+                            the wonders of this enchanting land..</h3>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/card-1.jpg" alt="" style="border-radius: 12px;  min-height: 250px; ">
+                        <h3> Follow along as we share the
+                            captivating tales of intrepid travelers who embarked on unforgettable journeys to explore
+                            the wonders of this enchanting land..</h3>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/card-3.jpg" alt="" style="border-radius: 12px;  min-height: 250px; ">
+                        <h3> Follow along as we share the
+                            captivating tales of intrepid travelers who embarked on unforgettable journeys to explore
+                            the wonders of this enchanting land..</h3>
+                    </div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+        <!-- <div class="footer" id="footer"> -->
+
+
+
+        <footer>
+            <div class="visme_d" data-title="Contact Form" data-url="pvmz60ko-contact-form" data-domain="forms"
+                data-full-page="false" data-min-height="500px" data-form-id="38218"></div>
+            <script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
+        </footer>
+
+        <!-- </div> -->
+
+    </div>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            // spaceBetween: 30,
+            // centeredSlides: true,
+            // autoplay: {
+            //     delay: 2500,
+            //     disableOnInteraction: false,
+            // },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+
+
+
+        //scroll reveal effect
+        //     const sr=ScrollReveal({
+        //         distance:"65px",
+        //         duration:2600,
+        //         delay:450,
+        //         reset:true
+        //     });
+        //    sr.reveal('.title',{delay:100,origin:'top'});
+
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration:800, // values from 0 to 3000, with step 50ms
+            easing: 'ease', // default easing for AOS animations
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
