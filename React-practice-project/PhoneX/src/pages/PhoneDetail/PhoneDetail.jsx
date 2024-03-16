@@ -8,7 +8,7 @@ const PhoneDetail = () => {
     const { productId } = useParams(); //we destructure productId property from obj return by useParams
     const { state } = useLocation();   //we destructure state property from object return by useLocation
     const { key } = useLocation();   //we destructure key property from object return by useLocation
-
+ 
     return (
         <div className={styles.detailpage}>
             {state?.map((phone) => {
